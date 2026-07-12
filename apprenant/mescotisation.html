@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gestion des Cotisations — Espace apprenant</title>
+<title>Gestion des Cotisations — Mes cotisations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
@@ -16,7 +16,7 @@
           sans: ['Inter', 'sans-serif'],
         },
         colors: {
-
+          gold: { 400: '#e0b559', 500: '#d4a857' },
           brand: { 600: '#2f5fd6', 700: '#274ec2' },
           leaf: { 600: '#1f9d5a', 700: '#17824a' },
         },
@@ -39,16 +39,16 @@
       </svg>
       <div class="font-display text-[13.5px] font-semibold leading-tight">
         Gestion des Cotisations
-        <span class="block text-[10px] font-medium tracking-[0.14em] uppercase text-[#d99a2b] mt-0.5  ">Espace apprenant</span>
+        <span class="block text-[10px] font-medium tracking-[0.14em] uppercase text-[#d99a2b] mt-0.5">Espace apprenant</span>
       </div>
     </div>
 
     <nav class="flex flex-col gap-[3px] flex-1">
-      <a href="appdashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white text-sm font-medium bg-[#d99a2b]/20 cursor-pointer">
+      <a href="appdashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white/70 text-sm font-medium hover:bg-white/[0.06] hover:text-white transition cursor-pointer">
         <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
         Tableau de bord
       </a>
-      <a href="mescotisation.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white/70 text-sm font-medium hover:bg-white/[0.06] hover:text-white transition cursor-pointer">
+      <a href="mescotisation.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white text-sm font-medium bg-[#d99a2b]/20 cursor-pointer">
         <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         Mes cotisations
       </a>
@@ -73,35 +73,28 @@
   <!-- ============ MAIN ============ -->
   <main class="flex-1 min-w-0 px-8 lg:px-10 py-8 pb-14">
 
-    <div class="mb-8">
-      <h1 class="font-display text-[22px] font-bold tracking-tight mb-1">Bienvenue, Fatou Sarr</h1>
+    <div class="flex items-start justify-between flex-wrap gap-4 mb-7">
+      <div>
+        <h1 class="font-display text-[22px] font-bold tracking-tight mb-1">Mes cotisations</h1>
+      </div>
     </div>
 
-    <!-- Stat cards -->
-    <div class="grid grid-cols-1 sm:grid-cols-3 gap-[18px] mb-[30px]">
-      <div class="bg-white rounded-2xl border border-[#e6e8f0] shadow-sm p-5">
-        <div class="w-[38px] h-[38px] rounded-[10px] flex items-center justify-center mb-3.5 bg-leaf-600/10 text-leaf-600">
-          <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-        </div>
-        <p class="text-[12.5px] font-medium text-[#5b6478] mb-1.5">Montant payé</p>
-        <p class="font-display text-[26px] font-bold tracking-tight mb-1">600 F</p>
+
+  
+    <div class="bg-white border border-[#e6e8f0] rounded-2xl shadow-sm p-4 mb-[18px] flex items-center gap-3 flex-wrap">
+      <div class="relative flex-1 min-w-[220px]">
+        <svg class="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-[#9aa3b5]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Rechercher une campagne…"
+          class="w-full pl-10 pr-3.5 py-2.5 rounded-[10px] border border-[#e6e8f0] text-[13px] text-[#101a2e] placeholder:text-[#9aa3b5] focus:outline-none focus:ring-2 focus:ring-brand-600/30 focus:border-brand-600">
       </div>
 
-      <div class="bg-white rounded-2xl border border-[#e6e8f0] shadow-sm p-5">
-        <div class="w-[38px] h-[38px] rounded-[10px] flex items-center justify-center mb-3.5 bg-[#e05656]/10 text-[#e05656]">
-          <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <p class="text-[12.5px] font-medium text-[#5b6478] mb-1.5">Montant restant</p>
-        <p class="font-display text-[26px] font-bold tracking-tight mb-1">500 F</p>
-      </div>
+      <select class="px-3.5 py-2.5 rounded-[10px] border border-[#e6e8f0] text-[13px] text-[#5b6478] bg-white focus:outline-none focus:ring-2 focus:ring-brand-600/30">
+        <option>Tous les statuts</option>
+        <option>Payé</option>
+        <option>En attente</option>
+        <option>Retard</option>
+      </select>
 
-      <div class="bg-white rounded-2xl border border-[#e6e8f0] shadow-sm p-5">
-        <div class="w-[38px] h-[38px] rounded-[10px] flex items-center justify-center mb-3.5 bg-gold-500/[0.16] text-[#a8781f]">
-          <svg class="w-[19px] h-[19px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-        </div>
-        <p class="text-[12.5px] font-medium text-[#5b6478] mb-1.5">Notifications</p>
-        <p class="font-display text-[26px] font-bold tracking-tight mb-1">3</p>
-      </div>
     </div>
 
     <!-- Table -->
@@ -120,30 +113,40 @@
             </tr>
           </thead>
           <tbody>
+
             <tr class="hover:bg-[#f6f7fb] transition">
-              <td class="px-[22px] py-3.5 text-[13.5px] font-semibold text-[#101a2e] border-b border-[#e6e8f0]">anniversaire</td>
+              <td class="px-[22px] py-3.5 text-[13.5px] font-semibold text-[#101a2e] border-b border-[#e6e8f0]">Anniversaire</td>
               <td class="px-[22px] py-3.5 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">500 F</td>
               <td class="px-[22px] py-3.5 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">10 juil. 2026</td>
               <td class="px-[22px] py-3.5 border-b border-[#e6e8f0]">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-leaf-600/10 text-leaf-600"><span class="w-1.5 h-1.5 rounded-full bg-current"></span>Payé</span>
               </td>
+
             </tr>
+
             <tr class="hover:bg-[#f6f7fb] transition">
               <td class="px-[22px] py-3.5 text-[13.5px] font-semibold text-[#101a2e] border-b border-[#e6e8f0]">Hebdomadaire</td>
-              <td class="px-[22px] py-3.5 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">100F</td>
+              <td class="px-[22px] py-3.5 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">100 F</td>
               <td class="px-[22px] py-3.5 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">04 juil. 2026</td>
               <td class="px-[22px] py-3.5 border-b border-[#e6e8f0]">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-leaf-600/10 text-leaf-600"><span class="w-1.5 h-1.5 rounded-full bg-current"></span>Payé</span>
               </td>
+
             </tr>
+
             <tr class="hover:bg-[#f6f7fb] transition">
-              <td class="px-[22px] py-3.5 text-[13.5px] font-semibold text-[#101a2e] border-b border-[#e6e8f0]">Deccés</td>
-              <td class="px-[22px] py-3.5 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">-</td>
+              <td class="px-[22px] py-3.5 text-[13.5px] font-semibold text-[#101a2e] border-b border-[#e6e8f0]">Décès</td>
+              <td class="px-[22px] py-3.5 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">500 F</td>
               <td class="px-[22px] py-3.5 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">—</td>
               <td class="px-[22px] py-3.5 border-b border-[#e6e8f0]">
                 <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#d99a2b]/[0.14] text-[#d99a2b]"><span class="w-1.5 h-1.5 rounded-full bg-current"></span>En attente</span>
               </td>
+
             </tr>
+
+
+
+
 
           </tbody>
         </table>
