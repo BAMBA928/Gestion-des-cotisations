@@ -10,11 +10,21 @@
 <script src="../assets/js/tailwind-config.js"></script>
 
 </head>
-<body class="min-h-screen bg-[#eef1f7] text-[#101a2e] font-sans flex">
-
+<body class="min-h-screen flex flex-col md:flex-row bg-[#eef1f7] text-[#101a2e] font-sans">
   <!-- ============ SIDEBAR ============ -->
-  <aside class="w-[246px] shrink-0 h-screen sticky top-0 flex flex-col p-[26px_18px] text-white bg-[#3F4E72]">
-    <div class="flex items-center gap-2.5 pb-[26px] mb-[18px] border-b border-white/10 px-2">
+<aside
+class="
+w-full
+md:w-[246px]
+bg-[#3F4E72]
+text-white
+flex
+flex-col
+p-5
+md:h-screen
+md:sticky
+top-0
+">    <div class="flex items-center gap-2.5 pb-[26px] mb-[18px] border-b border-white/10 px-2">
       <svg class="w-[34px] h-[34px] shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="32" cy="46" rx="20" ry="7" fill="#16233d"/>
         <ellipse cx="32" cy="40" rx="20" ry="7" fill="#274ec2"/>
@@ -66,18 +76,25 @@
   </aside>
 
   <!-- ============ MAIN ============ -->
-  <main class="flex-1 min-w-0 px-8 lg:px-10 py-8 pb-14">
-
-    <div class="flex items-start justify-between gap-4 flex-wrap mb-8">
-      <div>
+<main class="flex-1 min-w-0 px-8 lg:px-10 py-8 pb-14">
+<div
+class="
+flex
+flex-col
+sm:flex-row
+sm:items-center
+justify-between
+gap-4
+mb-8
+">      <div>
         <div class="mb-2 flex items-center gap-2 text-[13px] text-[#5b6478]">
 
         </div>
-        <h1 class="font-display text-[26px] font-bold tracking-tight mb-1">Relance des retardataires</h1>
+        <h1 class="font-display text-2xl md:text-3xl font-bold tracking-tight mb-1">Relance des retardataires</h1>
       </div>
 
       <button type="button"
-        class="inline-flex items-center gap-2 px-5 py-3 rounded-[10px] bg-gradient-to-b from-brand-600 to-brand-700 text-white text-[14px] font-semibold shadow-[0_8px_18px_-8px_rgba(39,78,194,0.55)] hover:brightness-[1.06] active:translate-y-px transition shrink-0">
+        class="inline-flex w-full sm:w-auto items-center gap-2 px-5 py-3 rounded-[10px] bg-gradient-to-b from-brand-600 to-brand-700 text-white text-[14px] font-semibold shadow-[0_8px_18px_-8px_rgba(39,78,194,0.55)] hover:brightness-[1.06] active:translate-y-px transition shrink-0">
         Relancer tous les retardataires
       </button>
     </div>
@@ -85,8 +102,7 @@
     <!-- Table -->
     <div class="bg-white border border-[#e6e8f0] rounded-2xl shadow-sm overflow-hidden">
       <div class="overflow-x-auto">
-        <table class="w-full border-collapse">
-          <thead>
+<table class="min-w-[900px] w-full border-collapse">          <thead>
             <tr class="bg-[#f6f7fb]">
               <th class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[#9aa3b5] px-6 py-3.5 border-b border-[#e6e8f0]">Nom</th>
               <th class="text-left text-[11.5px] font-semibold uppercase tracking-wider text-[#9aa3b5] px-6 py-3.5 border-b border-[#e6e8f0]">Téléphone</th>
@@ -105,10 +121,10 @@
               <td class="px-6 py-4 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">500f</td>
               <td class="px-6 py-4 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">1 semaines</td>
               <td class="px-6 py-4 border-b border-[#e6e8f0]">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#d99a2b]/[0.14] text-[#d99a2b]"></span>Retard</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#d99a2b]/[0.14] text-[#d99a2b]">Retard</span>
               </td>
               <td class="px-6 py-4 border-b border-[#e6e8f0] text-right">
-                <button type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
+                <button type="button" class="inline-flex whitespace-nowrap items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
                   Relancer
                 </button>
               </td>
@@ -120,10 +136,10 @@
               <td class="px-6 py-4 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">-</td>
               <td class="px-6 py-4 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">4 semaines</td>
               <td class="px-6 py-4 border-b border-[#e6e8f0]">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#e05656]/[0.12] text-red-300 "></span >Retard</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#e05656]/[0.12] text-red-300 ">Retard</span>
               </td>
               <td class="px-6 py-4 border-b border-[#e6e8f0] text-right">
-                <button type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
+                <button type="button" class="inline-flex whitespace-nowrap items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
                   Relancer
                 </button>
               </td>
@@ -135,10 +151,10 @@
               <td class="px-6 py-4 text-[13.5px] font-display font-semibold text-[#101a2e] border-b border-[#e6e8f0]">25 000 F</td>
               <td class="px-6 py-4 text-[13.5px] text-[#5b6478] border-b border-[#e6e8f0]">1 semaine</td>
               <td class="px-6 py-4 border-b border-[#e6e8f0]">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#d99a2b]/[0.14] text-[#d99a2b]"></span>Retard</span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-semibold bg-[#d99a2b]/[0.14] text-[#d99a2b]">Retard</span>
               </td>
               <td class="px-6 py-4 border-b border-[#e6e8f0] text-right">
-                <button type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
+                <button type="button" class="inline-flex whitespace-nowrap items-center gap-1.5 px-3.5 py-2 rounded-[8px] border border-brand-600/30 bg-brand-600/[0.06] text-brand-700 text-[12.5px] font-semibold hover:bg-brand-600/[0.12] transition">
                   Relancer
                 </button>
               </td>

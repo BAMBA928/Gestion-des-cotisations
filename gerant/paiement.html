@@ -10,11 +10,20 @@
 <script src="../assets/js/tailwind-config.js"></script>
 
 </head>
-<body class="min-h-screen bg-[#eef1f7] text-[#101a2e] font-sans flex">
-
-  <!-- ============ SIDEBAR ============ -->
-  <aside class="w-[246px] shrink-0 h-screen sticky top-0 flex flex-col p-[26px_18px] text-white bg-[#3F4E72]">
-    <div class="flex items-center gap-2.5 pb-[26px] mb-[18px] border-b border-white/10 px-2">
+<body class="min-h-screen flex flex-col md:flex-row bg-[#eef1f7] text-[#101a2e] font-sans">  <!-- ============ SIDEBAR ============ -->
+<aside
+class="
+w-full
+md:w-[246px]
+bg-[#3F4E72]
+text-white
+flex
+flex-col
+p-5
+md:h-screen
+md:sticky
+top-0
+">    <div class="flex items-center gap-2.5 pb-[26px] mb-[18px] border-b border-white/10 px-2">
       <svg class="w-[34px] h-[34px] shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="32" cy="46" rx="20" ry="7" fill="#16233d"/>
         <ellipse cx="32" cy="40" rx="20" ry="7" fill="#274ec2"/>
@@ -63,17 +72,35 @@
   </aside>
 
   <!-- MAIN -->
-  <main class="flex-1 min-w-0 px-8 lg:px-10 py-8 pb-14 ">
-
+<main class="flex-1 min-w-0 px-8 lg:px-10 py-8 pb-14">
     <div class="w-full max-w-2xl">
     
 
-      <h1 class="font-display text-[26px] font-bold tracking-tight mb-1">Nouveau Paiement</h1>
+      <h1
+class="
+font-display
+text-2xl
+md:text-3xl
+font-bold
+tracking-tight
+mb-4
+">Nouveau Paiement</h1>
       
 
       <!-- Form card -->
-      <form class="bg-white border border-[#e6e8f0] rounded-2xl shadow-sm p-8 lg:p-10">
-
+       <div class="w-full max-w-2xl mx-auto">
+<form
+class="
+w-full
+bg-white
+border
+border-[#e6e8f0]
+rounded-2xl
+shadow-sm
+p-5
+sm:p-8
+lg:p-10
+">
         <div class="mb-6">
           <label for="apprenant" class="block text-[13px] font-semibold text-[#101a2e] mb-2">Sélectionner un apprenant</label>
           <div class="relative">
@@ -126,15 +153,16 @@
 
         <div class="flex flex-col sm:flex-row gap-3 pt-2 border-t border-[#e6e8f0]">
           <button type="submit"
-            class="order-2 sm:order-1 flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 mt-6 rounded-[10px] bg-gradient-to-b from-brand-600 to-brand-700 text-white text-[14.5px] font-semibold shadow-[0_8px_18px_-8px_rgba(39,78,194,0.55)] hover:brightness-[1.06] active:translate-y-px transition">
+            class="order-2 sm:order-1 flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 mt-2 rounded-[10px] bg-gradient-to-b from-brand-600 to-brand-700 text-white text-[14.5px] font-semibold shadow-[0_8px_18px_-8px_rgba(39,78,194,0.55)] hover:brightness-[1.06] active:translate-y-px transition">
             Enregistrer
           </button>
           <button type="button"
-            class="order-1 sm:order-2 flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 mt-6 rounded-[10px] border border-[#e6e8f0] bg-white text-[#3d4558] text-[14.5px] font-semibold hover:bg-[#f6f7fb] active:translate-y-px transition">
+            class="order-1 sm:order-2 flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 mt-2 rounded-[10px] border border-[#e6e8f0] bg-white text-[#3d4558] text-[14.5px] font-semibold hover:bg-[#f6f7fb] active:translate-y-px transition">
             Annuler
           </button>
         </div>
       </form>
+      </div>
     </div>
 
   </main>

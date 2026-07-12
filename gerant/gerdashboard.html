@@ -48,10 +48,10 @@
     </script>
 </head>
 
-<body class="min-h-screen flex bg-canvas text-ink-900 font-sans">
+<body class="min-h-screen flex flex-col md:flex-row bg-canvas text-ink-900 font-sans">
 
     <!-- ============ SIDEBAR ============ -->
-    <aside class="w-[246px] shrink-0 bg-navy text-white flex flex-col p-[26px_18px] sticky top-0 h-screen">
+     <aside class="w-full md:w-[246px] bg-navy text-white flex flex-col p-5 md:sticky top-0 md:h-screen">
         <div class="flex items-center gap-2.5 pb-[26px] px-2 pt-1 border-b border-white/10 mb-[18px]">
             <svg class="w-[34px] h-[34px] shrink-0" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <ellipse cx="32" cy="46" rx="20" ry="7" fill="#16233d" />
@@ -123,13 +123,18 @@
     </aside>
 
     <!-- ============ MAIN ============ -->
-    <main class="flex-1 min-w-0 p-[28px_34px_50px] max-md:p-[22px_18px_40px]">
+
+    <main class="flex-1
+min-w-0
+p-4
+sm:p-6
+lg:p-8">
 
         <div class="flex items-center justify-between flex-wrap gap-3.5 mb-7">
             <div>
                 <h1 class="font-display text-[22px] font-bold m-0 mb-1 tracking-[-0.01em]">Bienvenue, Gérant</h1>
             </div>
-            <div class="flex gap-2.5">
+            <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <a href="paiement.html"
    class="inline-flex items-center gap-2 px-4 py-2.5 rounded-[10px] text-[13.5px] font-semibold text-white bg-gradient-to-b from-blue-600 to-blue-700 shadow-btn-blue hover:brightness-[1.06] active:translate-y-px transition">
     + Nouveau paiement
@@ -204,13 +209,14 @@
         </div>
 
         <!-- Table -->
+         
         <div class="bg-paper rounded-xl2 border border-line shadow-card overflow-hidden">
             <div class="flex items-center justify-between p-[18px_22px] border-b border-line">
                 <h2 class="font-display text-[15.5px] font-bold m-0">Derniers paiements</h2>
             </div>
 
             <div class="max-[780px]:overflow-x-auto">
-                <table class="w-full border-collapse">
+                    <table class="min-w-[700px] w-full border-collapse">
                     <thead>
                         <tr>
                             <th
