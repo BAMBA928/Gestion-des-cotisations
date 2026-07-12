@@ -7,23 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        fontFamily: {
-          display: ['Space Grotesk', 'sans-serif'],
-          sans: ['Inter', 'sans-serif'],
-        },
-        colors: {
-          gold: { 400: '#e0b559', 500: '#d4a857' },
-          brand: { 600: '#2f5fd6', 700: '#274ec2' },
-          leaf: { 600: '#1f9d5a', 700: '#17824a' },
-        },
-      },
-    },
-  }
-</script>
+<script src="../assets/js/tailwind-config.js"></script>
+
 </head>
 <body class="min-h-screen bg-[#eef1f7] text-[#101a2e] font-sans flex">
 
@@ -49,7 +34,7 @@
       <a href="gerdashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white/70 text-sm font-medium hover:bg-white/[0.06] hover:text-white transition cursor-pointer">
         <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
         Tableau de bord </a>
-   <a href="campange.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white/70 text-sm font-medium hover:bg-white/[0.06] hover:text-white transition cursor-pointer">
+   <a href="campagne.html" class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-white/70 text-sm font-medium hover:bg-white/[0.06] hover:text-white transition cursor-pointer">
         <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
         Campagnes
       </a>
@@ -64,10 +49,16 @@
 
       <div class="h-px bg-white/10 my-3.5 mx-1"></div>
 
-      <a class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-red-300/85 text-sm font-medium hover:bg-red-500/10 hover:text-red-200 transition cursor-pointer">
-        <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-        Déconnexion
-      </a>
+       <a href="../index.html"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-[10px] text-red-300/85 text-sm font-medium hover:bg-red-500/10 hover:text-red-200 transition">
+                <svg class="w-[18px] h-[18px] opacity-85" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                    <polyline points="16 17 21 12 16 7" />
+                    <line x1="21" y1="12" x2="9" y2="12" />
+                </svg>
+                Déconnexion
+            </a>
     </nav>
   </aside>
 
